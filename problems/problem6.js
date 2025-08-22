@@ -3,13 +3,7 @@
 
 
 function problem6(inventory) {
-    const carsData = [];
-
-    for (let i = 0; i < inventory.length; i++){
-        if ((inventory[i].car_make) == "BMW" || (inventory[i].car_make) == "Audi") {
-            carsData.push(inventory[i])
-        }
-    }
+    const carsData = inventory.filter(value => ((value.car_make === "BMW") || (value.car_make === "Audi")))
     return JSON.stringify(carsData)
 }
 
