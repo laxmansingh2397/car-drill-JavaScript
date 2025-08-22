@@ -4,8 +4,11 @@
 
 
 function problem2(inventory) {
-    const carData = inventory[inventory.length - 1]
-    return `Last car is a ${carData["car_make"]} ${carData["car_model"]}`
+    // const carData = inventory[inventory.length - 1]
+    // return `Last car is a ${carData["car_make"]} ${carData["car_model"]}`
+    const lastCar = inventory.map(value => value)
+    const lastIndex = lastCar.length -1
+    return `Last car is a ${lastCar[lastIndex].car_make} ${lastCar[lastIndex].car_model}`
 }
 
 
