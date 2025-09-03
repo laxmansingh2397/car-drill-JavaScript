@@ -3,10 +3,7 @@
 
 
 function problem4(inventory) {
-    let carYear = []
-    for(let i = 0; i < inventory.length; i++) {
-        carYear.push(inventory[i].car_year)
-    }
+    let carYear = inventory.map(value => value.car_year)
     return carYear
 }
 

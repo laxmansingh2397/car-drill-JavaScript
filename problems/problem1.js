@@ -3,11 +3,9 @@
 // "Car 33 is a *car year goes here* *car make goes here* *car model goes here*"
 
 function problem1(inventory) {
-    for(let i = 0; i < inventory.length; i++) {
-        if (inventory[i].id == 33) {
-            return `Car ${inventory[i].id} is a ${inventory[i].car_year} ${inventory[i].car_make} ${inventory[i].car_model}`
-        }
-    }
-}
 
+    const car33 = inventory.filter(values => values.id === 33);
+
+    return `Car ${car33[0].id} is a ${car33[0].car_year} ${car33[0].car_make} ${car33[0].car_model}`
+}
 module.exports = problem1;
